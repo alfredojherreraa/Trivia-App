@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Trivia</title>
+	</head>
+	<body>
+
+		<div class="position-absolute top-0 start-0 vh-100 vw-100">
+			<div
+				id="progress"
+				class="progress m-1 position-relative border border-primary"
+				style="z-index: 1000"
+			>
+				<div
+					class="progress-bar"
+					role="progressbar"
+					style="width: 0%"
+					aria-valuenow="100"
+					aria-valuemin="0"
+					aria-valuemax="100"
+				></div>
+			</div>
+
+			<div
+				id="box-form"
+				class="container d-flex align-items-center justify-content-center"
+			>
+				<div
+					class="bg-info shadow-lg p-3 rounded position-relative"
+					style="z-index: 1000"
+				>
+					<form action="" id="trivia-form">
+						<h1 class="mb-3 text-white fw-bold" > Trivia App - Alfredo Herrera</h1>
+						<div class="mb-3 text-white fw-bold">
+							<label for="" class="form-label">Categoría:</label>
+							<select
+								id="selec-category"
+								name="trivia_category"
+								class="form-select"
+							>
+								<option value="default">Calquiera</option>
+								<option value="9">General Knowledge</option>
+								<option value="10">Entertainment: Books</option>
+								<option value="11">Entertainment: Film</option>
+								<option value="12">Entertainment: Music</option>
+								<option value="13">
+									Entertainment: Musicals &amp; Theatres
+								</option>
+								<option value="14">Entertainment: Television</option>
+								<option value="15">Entertainment: Video Games</option>
+								<option value="16">Entertainment: Board Games</option>
+								<option value="17">Science &amp; Nature</option>
+								<option value="18">Science: Computers</option>
+								<option value="19">Science: Mathematics</option>
+								<option value="20">Mythology</option>
+								<option value="21">Sports</option>
+								<option value="22">Geography</option>
+								<option value="23">History</option>
+								<option value="24">Politics</option>
+								<option value="25">Art</option>
+								<option value="26">Celebrities</option>
+								<option value="27">Animals</option>
+								<option value="28">Vehicles</option>
+								<option value="29">Entertainment: Comics</option>
+								<option value="30">Science: Gadgets</option>
+								<option value="31">
+									Entertainment: Japanese Anime &amp; Manga
+								</option>
+								<option value="32">
+									Entertainment: Cartoon &amp; Animations
+								</option>
+							</select>
+						</div>
+						<div class="mb-3 text-white fw-bold">
+							<label for="" class="form-label">Dificultad:</label>
+							<select
+								id="select-difficulty"
+								name="trivia_difficulty"
+								class="form-select"
+							>
+								<option value="default">Cualquiera</option>
+								<option value="easy">Facil</option>
+								<option value="medium">Medio</option>
+								<option value="hard">Dificil</option>
+							</select>
+						</div>
+						<div class="mb-3 text-white fw-bold">
+							<label for="" class="form-label">Tipo de pregunta:</label>
+							<select id="select-type" name="trivia_type" class="form-select">
+								<option value="default">Cualquiera</option>
+								<option value="multiple">Selección multiple</option>
+								<option value="boolean">Verdadero / Falso</option>
+							</select>
+						</div>
+						<div class="d-flex m-3 mb-0">
+							<button
+								id="submit"
+								class="m-auto btn btn-secondary"
+								type="submit"
+							>Empezar</button>
+						</div>
+					</form>
+					<div id="trivia-questions">
+						<div id="box-question"></div>
+						<div
+							id="box-answer"
+							class="d-flex justify-content-center align-items-center"
+						></div>
+						<div id="box-buttons" class="d-flex mb-0">
+							<button id="next" class="m-auto btn btn-light">Siguiente</button>
+						</div>
+					</div>
+
+					<div id="score"></div>
+				</div>
+			</div>
+
+			<div
+				id="progressOne"
+				class="progress mx-1 position-relative border border-info"
+				style="z-index: 1000"
+			>
+				<div
+					class="progress-bar bg-success"
+					role="progressbar"
+					style="width: 0%"
+					aria-valuenow="50"
+					aria-valuemin="0"
+					aria-valuemax="100"
+				></div>
+			</div>
+		</div>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
